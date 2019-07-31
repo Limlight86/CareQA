@@ -13,7 +13,7 @@ const Confirmation = ({ message, type, id }) => {
     setQuestions([...newQuestions]);
   };
 
-  const decline = () => {
+  const decline = (id) => {
     const newQuestions = questions;
     const index = newQuestions.findIndex(e => e.id === id);
     newQuestions[index].confirmation = false;
@@ -25,7 +25,7 @@ const Confirmation = ({ message, type, id }) => {
       <div className="btn btn-primary" style={{marginRight:"16px"}} onClick={() => accept(id)}>
         Yes Please
       </div>
-      <div className="btn btn-danger" onClick={decline}>
+      <div className="btn btn-danger" onClick={() => decline(id)}>
         Not Yet
       </div>
     </Notification>
