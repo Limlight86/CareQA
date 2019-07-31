@@ -2,4 +2,4 @@ I recieved a challenge for a UI Position for CareCloud, this was the challenge I
 
 I decided to rebuild it using hook and create-react-app as opposed to the single page old school way that the challenge site wanted me to do (I did that one too but didnt like it).
 
-This version not only is a full app, but is actually better functionality-wise, the challenge was more about passing tests and not about making a fully working app, I didnt even like the fact that I couldnt boot up my local server to see my app take shape, I need that visual to create UI elements.
+This version is an updagrade from the actual challenge, itis actually better functionality-wise, you can check each items answer individually. The challenge was more about passing tests and not about making a fully working app, I didnt even like the fact that I couldnt boot up my local server to see my app take shape, I need that visual to create UI elements.
