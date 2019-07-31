@@ -12,7 +12,9 @@ const QuestionContainer = ({ question, answer, id, showAnswer, confirmation }) =
     newQuestions[index].confirmation = true;
     setQuestions([...newQuestions])
   }
-const containerStyle = [styles.qContainer, 'container']
+
+  const containerStyle = [styles.qContainer, 'container']
+
   return (
     <div className={containerStyle.join(" ")}>
       {confirmation ? 
