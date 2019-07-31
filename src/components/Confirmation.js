@@ -5,7 +5,7 @@ import Notification from "./Notification";
 const Confirmation = ({ message, type, id }) => {
   const { questions, setQuestions } = useContext(QAContext);
 
-  const accept = id => {
+  const accept = (id) => {
     const newQuestions = questions;
     const index = newQuestions.findIndex(e => e.id === id);
     newQuestions[index].showAnswer = true;
