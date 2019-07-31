@@ -1,0 +1,12 @@
+.qContainer {
+  border: solid 1px black;
+  text-align: center;
+  margin-bottom: 16px;
+  padding: 16px 0;
+  width: 60%;
+}
+
+.answer {
+  margin-top: 16px;
+  font-weight: bold;
+}
