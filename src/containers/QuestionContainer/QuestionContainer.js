@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { AnswerContext } from "../../context/AnswerContext";
-import Confirmation from '../Confirmation'
+import Confirmation from '../../components/Confirmation'
 import styles from "./QuestionContainer.module.css";
 
 const QuestionContainer = ({ question, answer }) => {

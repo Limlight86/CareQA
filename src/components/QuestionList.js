@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { QAContext } from "../context/QAcontext";
 import { AnswerContextProvider } from "../context/AnswerContext";
-import QuestionContainer from "./QuestionContainer/QuestionContainer";
+import QuestionContainer from "../containers/QuestionContainer/QuestionContainer";
 
 const QuestionList = () => {
   const { questions } = useContext(QAContext);
