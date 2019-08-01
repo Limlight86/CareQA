@@ -1,9 +1,10 @@
-import React, { useState } from "react"
+import React, { useContext } from "react"
+import { AnswerContext } from "../../context/AnswerContext";
 import Confirmation from '../Confirmation'
 import styles from "./QuestionContainer.module.css";
 
-const QuestionContainer = ({ question, answer, id, showAnswer}) => {
-  const [showConfirmation, setShowConfirmation] = useState(false)
+const QuestionContainer = ({ question, answer }) => {
+  const { showAnswer, showConfirmation, setShowConfirmation } = useContext(AnswerContext)
 
   const handleClick = () =>{
     setShowConfirmation(true)
@@ -16,11 +17,10 @@ const QuestionContainer = ({ question, answer, id, showAnswer}) => {
       {showConfirmation ? 
         <Confirmation 
           message={"Reveal the Answer?"} 
-          type={"message"}
-          id={id}/> : null
+          type={"message"}/> : null
       }
       <p>{question}</p>
-      <button className="btn btn-primary" disabled={false} onClick={handleClick}>
+      <button className="btn btn-primary" disabled={showAnswer} onClick={handleClick}>
          {showAnswer ? "The Answer is..." : "Show Answer"}
       </button>
       {showAnswer ? <p className={styles.answer}>{answer}</p> : null}

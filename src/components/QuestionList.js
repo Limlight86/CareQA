@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { QAContext } from "../context/QAcontext";
+import { AnswerContextProvider } from "../context/AnswerContext";
 import QuestionContainer from "./QuestionContainer/QuestionContainer";
 
 const QuestionList = () => {
@@ -9,14 +10,12 @@ const QuestionList = () => {
     <div>
       {questions.map(e => {
         return (
-          <QuestionContainer
-            key={e.id}
-            question={e.question}
-            answer={e.answer}
-            id={e.id}
-            showAnswer={e.showAnswer}
-            confirmation={e.confirmation}
-          />
+          <AnswerContextProvider key={e.id}>
+            <QuestionContainer
+              question={e.question}
+              answer={e.answer}
+            />
+          </AnswerContextProvider>
         );
       })}
     </div>
